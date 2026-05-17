@@ -311,27 +311,43 @@ body{
 }
 /* --- COMPRESSED RESPONSIVENESS --- */
 @media (max-width: 992px) {
-/* Stacks hero section content vertically and centers elements */
-.a {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 100px 20px 40px 20px;
-}
-.group { max-width: 100%; }
-.icons { justify-content: center; }
-#ak { width: 280px; height: 280px; }
+    /* Stacks the navbar layout vertically and centers the links */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .con {
+        flex-wrap: wrap;       /* Allows buttons to cleanly wrap to a new line if the phone is tiny */
+        justify-content: center; 
+        gap: 5px;             /* Reduces spacing slightly so they fit better on mobile screens */
+    }
+    .con a {
+        padding: 6px 10px;    /* Makes the buttons slightly smaller on touchscreens */
+        font-size: 0.9rem;
+    }
 
-/* Forces horizontal rows/grids into clean, single-column stacks */
-.skills-row, .project-top-row { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 20px; 
-}
-.project-bottom-row .project-card { max-width: 100%; }
-.section-block { padding: 60px 20px 20px 20px; }
+    /* Stacks hero section content vertically and centers elements */
+    .a {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 160px 20px 40px 20px; /* Increased top padding so the new stacked navbar doesn't overlap text */
+    }
+    .group { max-width: 100%; }
+    .icons { justify-content: center; }
+    #ak { width: 280px; height: 280px; }
 
-/* Dynamically downscales typography for mobile viewports */
-.group h1 { font-size: 2.5rem; }
-.group h2 { font-size: 1.8rem; }
-.section-title { font-size: 2.2rem; }
+    /* Forces horizontal rows/grids into clean, single-column stacks */
+    .skills-row, .project-top-row { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 20px; 
+    }
+    .project-bottom-row .project-card { max-width: 100%; }
+    .section-block { padding: 60px 20px 20px 20px; }
+
+    /* Dynamically downscales typography for mobile viewports */
+    .group h1 { font-size: 2.5rem; }
+    .group h2 { font-size: 1.8rem; }
+    .section-title { font-size: 2.2rem; }
 }
